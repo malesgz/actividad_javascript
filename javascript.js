@@ -74,5 +74,64 @@ function obtenerPromedioPonderado(notas, pesos) {
     return promedioPonderado;
 }
 // 4° EJERCICIO.
+function obtenerMaximo(arreglo) {
+    if (arreglo.length === 0) {
+      throw new Error("El arreglo está vacío.");
+    }
 
+    let maximo = arreglo[0];
+
+    for (let i = 1; i < arreglo.length; i++) {
+      if (arreglo[i] > maximo) {
+        maximo = arreglo[i];
+      }
+    }
+    return maximo;
+}
+const numeros = [5, 9, 2, 14, 8, 1];
+const maximo = obtenerMaximo(numeros);
+console.log("El número máximo es:", maximo);
+
+// EJERCICIOS DE OBJETOS.
+// 1° EJERCICIO.
+
+let producto = {
+    nombre: "Nombre del producto",
+    precio: 0,
+    cantidad: 0
+  };
+  function calculaTotal(producto) {
+    return producto.precio * producto.cantidad;
+}
+let miProducto = {
+    nombre: "Camiseta",
+    precio: 15,
+    cantidad: 2
+};
+
+let totalPagar = calculaTotal(miProducto);
+console.log("Total a pagar: $" + totalPagar);
+
+// 2° EJERCICIO.
+
+let persona = {
+    nombre: "",
+    edad: 0,
+    profesion: ""
+};
+// Presentar a la persona
+  function presentarPersona(persona) {
+    console.log("Nombre: " + persona.nombre);
+    console.log("Edad: " + persona.edad);
+    console.log("Profesión: " + persona.profesion);
+};
+presentarPersona(miPersona);
+
+// 4° EJERCICIO.
+
+function esMayorEdad(persona) {
+    return persona.edad >= 18;
+};
+let resultado = esMayorEdad(miPersona);
+console.log(resultado); // Devuelve true si es mayor de edad, de lo contrario false
   
